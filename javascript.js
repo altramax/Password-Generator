@@ -42,11 +42,12 @@ document.querySelector('.numbers').addEventListener('change', function(e){
     for(let i = 0; i < numbers.length; i++){
       restart.push(numbers[i]);
     }
-    console.log(restart);
   }else{ 
-    restart = [];
-    console.log(restart);
+  for(let i = numbers.length - 1; i >= 0; i--){
+    restart.pop(numbers[i]);
   }
+  }
+  console.log(restart);
 })
 
 document.querySelector('.small-alphabets').addEventListener('change', function(e){
@@ -54,11 +55,12 @@ document.querySelector('.small-alphabets').addEventListener('change', function(e
     for(let i = 0; i < smallAlphabets.length; i++){
       restart.push(smallAlphabets[i]);
     }
-    console.log(restart);
   }else{ 
-    restart = [];
-    console.log(restart);
+    for(let i = smallAlphabets.length - 1; i >= 0; i--){
+      restart.pop(smallAlphabets[i]);
+    }
   }
+  console.log(restart);
 })
 
 document.querySelector('.capital-alphabets').addEventListener('change', function(e){
@@ -66,11 +68,12 @@ document.querySelector('.capital-alphabets').addEventListener('change', function
     for(let i = 0; i < capitalAlphabets.length; i++){
       restart.push(capitalAlphabets[i]);
     }
-    console.log(restart);
   }else{ 
-    restart = [];
-    console.log(restart);
+    for(let i = capitalAlphabets.length - 1; i >= 0; i--){
+      restart.pop(capitalAlphabets[i]);
+    }
   }
+  console.log(restart);
 })
 
 document.querySelector('.symbols').addEventListener('change', function(e){
@@ -78,18 +81,19 @@ document.querySelector('.symbols').addEventListener('change', function(e){
     for(let i = 0; i < symbols.length; i++){
       restart.push(symbols[i]);
     }
-    console.log(restart);
   }else{ 
-    restart = [];
-    console.log(restart);
+    for(let i = symbols.length - 1; i >= 0; i--){
+      restart.pop(symbols[i]);
+    }
   }
+  console.log(restart);
 })
 
  let outPut = document.querySelector('.password');
 
   let arr = function (value){
     let key = [];
-    for(let i = 0; i < 4; i++){
+    for(let i = 0; i < 12; i++){
      key.push(value[Math.floor(Math.random() * value.length) * 1]);
     }
   return key;
@@ -99,5 +103,5 @@ document.querySelector('.click').addEventListener("click", function(){
   let password = arr(restart);
   console.log(password.join(' '));
   outPut.textContent = password.join(' ') ;
-  document.querySelector('.message').textContent = "Your password is"
+  document.querySelector('.message').textContent = "Your password is";
 })
