@@ -36,3 +36,42 @@
   font-size: 1rem;
   border-radius: 0.3rem;
 }
+
+.checkboxes{
+  width: 20rem;
+  font-size: 1.8rem;
+  margin: 2rem 0;
+}
+
+.box{
+  margin: 1rem 0;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.block{
+  margin-left: 2rem;
+}
+
+input[type='checkbox']{
+  appearance: none;
+  width: 2rem;
+  height: 2rem;
+  background-color: #fff;
+}
+
+input[type='checkbox']:after{
+  font-family: "Font awesome 5 free";
+  font-weight: 900;
+  content: "\f00c";
+  cursor: pointer;
+  display: none;
+  font-size: 1.5rem;
+  padding: 0.2rem;
+  color: #28b487;
+}
+
+input[type="checkbox"]:checked:after{
+  display: block;
+}

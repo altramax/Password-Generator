@@ -5,12 +5,31 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>JavaScript Fundamentals – Part 1</title>
-   <link rel="stylesheet" href="./styles.css">
+    <link rel="stylesheet" href="./styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
   </head>
   <body class="container">
     <h1 class="heading message">Random Password Generator</h1>
-    <span class="input password"></span>
+    <span class="input password"> Password </span>
     <button class="click">Click here</button>
+  <form class="checkboxes">
+    <div class="box">
+      <input type="checkbox" id="checkbox" class="small-alphabets">
+      <label for="checkbox" class="block"> Add Small letter</label>
+    </div>
+    <div class="box">
+      <input type="checkbox" id="checkbox" class="capital-alphabets">
+      <label for="checkbox" class="block"> Add Capital letter</label>
+    </div>
+    <div class="box">
+      <input type="checkbox" id="checkbox" class="numbers">
+      <label for="checkbox" class="block"> Add numbers </label>
+    </div>
+    <div class="box">
+      <input type="checkbox" id="checkbox" class="symbols">
+      <label for="checkbox" class="block"> Add symbols</label>
+    </div>
+  </form>  
   <script src="javascript.js"></script>
   </body>
 </html>
